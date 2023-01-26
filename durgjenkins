@@ -1,0 +1,30 @@
+pipeline {
+    agent any 
+        stages (CI)
+        {
+            stage('checkout') {
+                steps{
+                //script
+                echo "checkout"
+                }
+               
+            }
+
+            stage ('build'){
+                steps{
+                //script
+                sh mvn clean install
+                }
+               
+            }
+            stage ('test'){
+                steps{
+                //script
+                echo "test"
+                }
+               
+            }
+
+        }
+
+}
