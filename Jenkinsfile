@@ -1,6 +1,5 @@
 pipeline {
    agent any 
-
   stages ('CI') {
     stage('Checkout') {
       steps {
@@ -8,7 +7,6 @@ pipeline {
         checkout scm
       }
     }
-
     stage('Build') {
       steps {
         // script
@@ -22,7 +20,5 @@ pipeline {
         sh 'mvn Test'
       }
     }
-
   }
-
 }
